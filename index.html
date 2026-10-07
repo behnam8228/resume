@@ -6,18 +6,12 @@
 <title>بهنام علی‌پور | Behnam Alipour</title>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
 <style>
-/* ====== رنگ‌ها / Colors — اینجا را برای تغییر رنگ‌ها ویرایش کن ====== */
-:root{
-  --bg:#0c0c0c; --surface:#161616; --text:#ece8df; --muted:#9a958a; --line:#2a2a2a;
-  --accent:#d4af37; --on-accent:#0c0c0c;
-}
+/* ====== رنگ‌ها / Colors ====== */
+:root{--bg:#0c0c0c;--surface:#161616;--text:#ece8df;--muted:#9a958a;--line:#2a2a2a;--accent:#d4af37;--on-accent:#0c0c0c}
 [data-accent="red"]{--accent:#e03a3e}
 [data-accent="white"]{--accent:#ffffff}
 [data-accent="white"] .btn.primary{color:#0c0c0c}
-[data-theme="light"]{
-  --bg:#f6f3ec; --surface:#ffffff; --text:#171717; --muted:#6b665c; --line:#ddd8cc;
-  --accent:#9a7410; --on-accent:#ffffff;
-}
+[data-theme="light"]{--bg:#f6f3ec;--surface:#ffffff;--text:#171717;--muted:#6b665c;--line:#ddd8cc;--accent:#9a7410;--on-accent:#ffffff}
 [data-theme="light"][data-accent="red"]{--accent:#b3202a}
 [data-theme="light"][data-accent="white"]{--accent:#111111;--on-accent:#ffffff}
 [data-theme="light"][data-accent="white"] .btn.primary{color:#fff}
@@ -25,19 +19,16 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9;transition:background .3s,color .3s}
-html[lang="en"] body{font-family:"Vazirmatn","Segoe UI",sans-serif;line-height:1.7}
+html[lang="en"] body{line-height:1.7}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-
-/* زبان / Language */
-html[lang="fa"] .en, html[lang="en"] .fa{display:none!important}
-
+html[lang="fa"] .en,html[lang="en"] .fa{display:none!important}
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
 
 /* نوار بالا */
 header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-.logo{font-family:"Fraunces",serif;font-weight:700;font-size:1.4rem;color:var(--accent);letter-spacing:.5px}
+.logo{font-family:"Fraunces",serif;font-weight:700;font-size:1.4rem;color:var(--accent)}
 nav{display:flex;gap:22px;font-size:.92rem;color:var(--muted)}
 nav a:hover{color:var(--accent)}
 .tools{display:flex;gap:8px;align-items:center}
@@ -50,17 +41,16 @@ nav a:hover{color:var(--accent)}
 .dots [data-c="white"]{background:#f2f2f2}
 
 /* بخش اول */
-.hero{padding:96px 0 72px;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.hero{padding:80px 0 60px;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
 .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.15;font-weight:800}
 html[lang="en"] .hero h1{font-family:"Fraunces",serif;font-weight:700}
 .role{margin-top:14px;font-size:1.25rem;color:var(--accent);font-weight:600}
-.hero p.lead{margin-top:18px;color:var(--muted);max-width:52ch}
+.lead{margin-top:18px;color:var(--muted);max-width:52ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .btn{display:inline-block;padding:11px 24px;border-radius:10px;border:1px solid var(--accent);font-weight:600;cursor:pointer;font-family:inherit;font-size:.95rem;background:none;color:var(--text);transition:.2s}
 .btn.primary{background:var(--accent);color:var(--on-accent)}
 .btn:hover{transform:translateY(-2px)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
-/* عکس پروفایل */
 .photo{width:220px;height:220px;margin:0 auto 22px;border-radius:50%;padding:5px;background:conic-gradient(var(--accent),transparent 40%,var(--accent) 70%,transparent);box-shadow:0 12px 40px color-mix(in srgb,var(--accent) 25%,transparent)}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;border-radius:50%;border:5px solid var(--bg);display:block}
 .facts{list-style:none;display:grid;gap:14px}
@@ -70,8 +60,8 @@ html[lang="en"] .hero h1{font-family:"Fraunces",serif;font-weight:700}
 .facts a:hover{color:var(--accent)}
 
 /* بخش‌ها */
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:1.7rem;font-weight:800;margin-bottom:28px;display:flex;align-items:center;gap:14px}
+section{padding:48px 0;border-top:1px solid var(--line);scroll-margin-top:64px}
+h2{font-size:1.7rem;font-weight:800;margin-bottom:26px;display:flex;align-items:center;gap:14px}
 h2::after{content:"";flex:1;height:1px;background:linear-gradient(to var(--end,left),var(--accent),transparent)}
 html[dir="rtl"]{--end:left}
 html[dir="ltr"]{--end:right}
@@ -82,19 +72,39 @@ html[dir="ltr"]{--end:right}
 .meta{color:var(--accent);font-size:.9rem;margin:2px 0 8px}
 .job ul{padding-inline-start:20px;color:var(--muted)}
 .edu{margin-top:30px}
+
+/* مهارت‌ها (قابل کلیک) */
 .skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-weight:600;transition:.2s}
-.skill:hover{border-color:var(--accent);color:var(--accent)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.skill{padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-weight:600;transition:.2s;cursor:pointer}
+.skill:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+/* مدارک */
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.cert{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px;scroll-margin-top:90px;transition:.25s}
+.cert:hover{transform:translateY(-4px);border-color:var(--accent)}
+.cert:target{border-color:var(--accent);animation:glow 1.6s ease 2}
+@keyframes glow{50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 35%,transparent)}}
+.badge{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font:700 .9rem "Fraunces",serif;color:var(--accent);border:1px solid var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);margin-bottom:6px}
+.cert h3{font-size:1.05rem}
+.cert p{color:var(--muted);font-size:.85rem;line-height:1.6}
+.vers{display:flex;gap:8px;margin-top:auto;padding-top:12px}
+.pill{position:relative;flex:1;text-align:center;padding:6px 8px;border:1px solid var(--line);border-radius:8px;font-size:.82rem;font-weight:600;transition:.2s}
+.pill:hover,.pill:focus-visible{border-color:var(--accent);color:var(--accent)}
+html[lang="en"] 
+/* نمونه‌کار */
+.work{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+.work ul{padding-inline-start:20px;color:var(--muted);font-size:.92rem;margin-top:8px}
+.work img{width:100%;border-radius:12px;border:1px solid var(--line)}
 .card h3{margin-bottom:6px}
 .card p{color:var(--muted);font-size:.95rem}
-.tag{display:inline-block;margin-top:12px;font-size:.82rem;color:var(--accent)}
 footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
 
 @media(max-width:760px){
   nav{display:none}
-  .hero{grid-template-columns:1fr;padding:56px 0 40px}
-  .grid2{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr;padding:48px 0 32px}
+  .work{grid-template-columns:1fr}
+  .certs{grid-template-columns:1fr 1fr;gap:12px}
+  .cert{padding:16px}
 }
 @media print{
   header,.cta,footer{display:none}
@@ -112,6 +122,7 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <nav>
       <a href="#exp"><span class="fa">سوابق</span><span class="en">Experience</span></a>
       <a href="#skills"><span class="fa">مهارت‌ها</span><span class="en">Skills</span></a>
+      <a href="#certs"><span class="fa">مدارک</span><span class="en">Certificates</span></a>
       <a href="#work"><span class="fa">نمونه‌کار</span><span class="en">Portfolio</span></a>
       <a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
     </nav>
@@ -145,17 +156,15 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-s
         <a class="btn" href="#contact"><span class="fa">تماس با من</span><span class="en">Get in touch</span></a>
       </div>
     </div>
-
     <aside>
-      <!-- عکس: برای تغییر، فایل photo.jpg را با عکس جدید (با همین نام) جایگزین کن -->
       <div class="photo"><img src="photo.jpg" alt="Behnam Alipour"></div>
       <div class="card">
-      <ul class="facts">
-        <li><span class="fa">سن</span><span class="en">Age</span><span>23</span></li>
-        <li><span class="fa">شهر</span><span class="en">City</span><span><span class="fa">رشت</span><span class="en">Rasht, Iran</span></span></li>
-        <li><span class="fa">تحصیلات</span><span class="en">Education</span><span><span class="fa">ارشد در حال تحصیل</span><span class="en">MSc (in progress)</span></span></li>
-        <li><span class="fa">زبان</span><span class="en">English</span><span><span class="fa">متوسط رو به بالا</span><span class="en">Upper-intermediate</span></span></li>
-      </ul>
+        <ul class="facts">
+          <li><span class="fa">سن</span><span class="en">Age</span><span>23</span></li>
+          <li><span class="fa">شهر</span><span class="en">City</span><span><span class="fa">رشت</span><span class="en">Rasht, Iran</span></span></li>
+          <li><span class="fa">تحصیلات</span><span class="en">Education</span><span><span class="fa">ارشد در حال تحصیل</span><span class="en">MSc (in progress)</span></span></li>
+          <li><span class="fa">زبان</span><span class="en">English</span><span><span class="fa">متوسط</span><span class="en">Intermediate</span></span></li>
+        </ul>
       </div>
     </aside>
   </div>
@@ -189,40 +198,117 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   <section id="skills">
     <h2><span class="fa">مهارت‌ها</span><span class="en">Skills</span></h2>
     <div class="skills">
-      <span class="skill">Python</span>
-      <span class="skill">Excel</span>
-      <span class="skill">Access</span>
-      <span class="skill">Power BI</span>
-      <span class="skill">MS Project</span>
-      <span class="skill">PowerPoint</span>
+      <a class="skill" href="#cert-python">Python</a>
+      <a class="skill" href="#cert-excel">Excel</a>
+      <a class="skill" href="#cert-access">Access</a>
+      <a class="skill" href="#cert-powerbi">Power BI</a>
+      <a class="skill" href="#cert-msproject">MS Project</a>
+      <a class="skill" href="#cert-powerpoint">PowerPoint</a>
+      <a class="skill" href="#cert-word">Word</a>
     </div>
-    <div class="grid2" style="margin-top:28px">
-      <div class="card">
-        <h3><span class="fa">زبان‌ها</span><span class="en">Languages</span></h3>
-        <p><span class="fa">فارسی: زبان مادری<br>انگلیسی: متوسط رو به بالا</span><span class="en">Persian: Native<br>English: Upper-intermediate</span></p>
-      </div>
-      <div class="card">
-        <h3><span class="fa">گواهینامه</span><span class="en">Certificate</span></h3>
-        <p><span class="fa">اکسل پیشرفته (نسخه فارسی و انگلیسی)</span><span class="en">Advanced Excel (Persian &amp; English versions)</span></p>
-        <a class="btn" href="certificate.pdf" target="_blank" style="margin-top:14px"><span class="fa">مشاهده مدرک</span><span class="en">View certificate</span></a>
-        <a class="btn" href="certificate(1).pdf" target="_blank" style="margin-top:14px"><span class="fa">مشاهده مدرک</span><span class="en">View certificate</span></a>
-      </div>
+  </section>
+
+  <section id="certs">
+    <h2><span class="fa">مدارک و گواهینامه‌ها</span><span class="en">Certificates</span></h2>
+    <div class="certs">
+
+      <article class="cert" id="cert-python">
+        <div class="badge">Py</div>
+        <h3>Python</h3>
+        <p><span class="fa">برنامه‌نویسی پایتون</span><span class="en">Python programming</span></p>
+        <div class="vers">
+          <a class="pill" href="python-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="python-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
+      <article class="cert" id="cert-excel">
+        <div class="badge">XL</div>
+        <h3>Excel</h3>
+        <p><span class="fa">اکسل پیشرفته</span><span class="en">Advanced Excel</span></p>
+        <div class="vers">
+          <a class="pill" href="excel-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="excel-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
+      <article class="cert" id="cert-access">
+        <div class="badge">Ac</div>
+        <h3>Access</h3>
+        <p><span class="fa">پایگاه داده اکسس</span><span class="en">Access databases</span></p>
+        <div class="vers">
+          <a class="pill" href="access-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="access-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
+      <article class="cert" id="cert-powerbi">
+        <div class="badge">BI</div>
+        <h3>Power BI</h3>
+        <p><span class="fa">تحلیل و داشبورد پاور بی‌آی</span><span class="en">Power BI analytics</span></p>
+        <div class="vers">
+          <a class="pill" href="powerbi-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="powerbi-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
+      <article class="cert" id="cert-msproject">
+        <div class="badge">MP</div>
+        <h3>Microsoft Project</h3>
+        <p><span class="fa">مدیریت پروژه</span><span class="en">Project management</span></p>
+        <div class="vers">
+          <a class="pill" href="ms-project-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="ms-project-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
+      <article class="cert" id="cert-powerpoint">
+        <div class="badge">PP</div>
+        <h3>PowerPoint</h3>
+        <p><span class="fa">طراحی ارائه با پاورپوینت</span><span class="en">Presentation design</span></p>
+        <div class="vers">
+          <a class="pill" href="powerpoint-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="powerpoint-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
+      <article class="cert" id="cert-word">
+        <div class="badge">W</div>
+        <h3>Word</h3>
+        <p><span class="fa">تایپ و نگارش با ورد</span><span class="en">Document writing</span></p>
+        <div class="vers">
+          <a class="pill" href="word-fa.pdf" target="_blank"><span class="fa">فارسی</span><span class="en">Persian</span></a>
+          <a class="pill" href="word-en.pdf" target="_blank"><span class="fa">انگلیسی</span><span class="en">English</span></a>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <section id="work">
     <h2><span class="fa">نمونه‌کار</span><span class="en">Portfolio</span></h2>
-    <div class="card">
-      <h3><span class="fa">داشبورد مدیریتی اکسل</span><span class="en">Excel Management Dashboard</span></h3>
-      <p><span class="fa">داشبوردی برای پایش شاخص‌های کلیدی و تصمیم‌گیری مدیریتی. (این فایل پی دی اف از نسخه نهایی پروژه است و صرفا برای نمایش نمونه کار کاربرد دارد .
-این داشبورد مدیریتی شامل :
-۱. داشبورد — فیلتر تاریخ بالای صفحه، ۶ کارت KPI (فروش کل، تعداد فروش، سود، تعداد اقلام، موجودی کل، پرفروش‌ترین کالا)، نوار هشدار کمبود موجودی، و ۳ نمودار (روند ماهانه، فروش بر اساس کالا، سهم دسته‌بندی‌ها) — همه با فرمول زنده و بدون Pivot Table استاتیک.
-۲. ثبت فروش — با دراپ‌داون برای مشتری/کالا/روش پرداخت؛ قیمت واحد خودکار از انبار کشیده می‌شود.
-۳. انبار — موجودی، حداقل موجودی، هشدار خودکار «کمبود» با رنگ قرمز.
-۴. مشتریان — آمار خرید هر مشتری خودکار از شیت فروش محاسبه می‌شود.
-۵. راهنما — توضیح کامل نحوه استفاده و سفارشی‌سازی .)</span><span class="en">A dashboard for tracking key indicators and supporting management decisions. (Add a more specific project description here.)</span></p>
-      <img src="nemune.png" alt="Dashboard" style="width:100%;border-radius:12px;margin-top:16px">
-      <a class="btn" href="dashbord.pdf" target="_blank" style="margin-top:16px"><span class="fa">مشاهده نمونه‌کار (PDF)</span><span class="en">View portfolio (PDF)</span></a>
+    <div class="card work">
+      <div>
+        <h3><span class="fa">داشبورد مدیریتی اکسل</span><span class="en">Excel Management Dashboard</span></h3>
+        <p class="fa">داشبوردی برای پایش شاخص‌های کلیدی و تصمیم‌گیری مدیریتی. فایل PDF از نسخه نهایی پروژه است و صرفاً برای نمایش نمونه‌کار کاربرد دارد. این داشبورد شامل ۵ شیت است:</p>
+        <p class="en">A dashboard for tracking key indicators and supporting management decisions. The PDF is taken from the final version of the project and is for showcase purposes only. It contains 5 sheets:</p>
+        <ul class="fa">
+          <li><b>داشبورد:</b> فیلتر تاریخ، ۶ کارت KPI (فروش کل، تعداد فروش، سود، تعداد اقلام، موجودی کل، پرفروش‌ترین کالا)، نوار هشدار کمبود موجودی و ۳ نمودار (روند ماهانه، فروش بر اساس کالا، سهم دسته‌بندی‌ها) — همه با فرمول زنده و بدون Pivot Table استاتیک.</li>
+          <li><b>ثبت فروش:</b> دراپ‌داون برای مشتری، کالا و روش پرداخت؛ قیمت واحد خودکار از انبار کشیده می‌شود.</li>
+          <li><b>انبار:</b> موجودی، حداقل موجودی و هشدار خودکار «کمبود» با رنگ قرمز.</li>
+          <li><b>مشتریان:</b> آمار خرید هر مشتری به‌صورت خودکار از شیت فروش محاسبه می‌شود.</li>
+          <li><b>راهنما:</b> توضیح کامل نحوه استفاده و سفارشی‌سازی.</li>
+        </ul>
+        <ul class="en">
+          <li><b>Dashboard:</b> date filter, 6 KPI cards (total sales, number of sales, profit, item count, total stock, best-selling item), low-stock alert bar and 3 charts (monthly trend, sales by item, category share), all driven by live formulas with no static Pivot Tables.</li>
+          <li><b>Sales entry:</b> dropdowns for customer, item and payment method; unit price is pulled automatically from the warehouse sheet.</li>
+          <li><b>Warehouse:</b> stock, minimum stock and an automatic red "shortage" alert.</li>
+          <li><b>Customers:</b> each customer's purchase stats are calculated automatically from the sales sheet.</li>
+          <li><b>Guide:</b> full instructions for use and customization.</li>
+        </ul>
+        <a class="btn" href="dashbord.pdf" target="_blank" style="margin-top:18px"><span class="fa">مشاهده نمونه‌کار (PDF)</span><span class="en">View portfolio (PDF)</span></a>
+      </div>
+      <img src="nemune.png" alt="Dashboard">
     </div>
   </section>
 
@@ -241,27 +327,25 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <footer>© 2026 <span class="fa">بهنام علی‌پور</span><span class="en">Behnam Alipour</span></footer>
 
 <script>
-const root = document.documentElement;
-function save(k,v){ try{ localStorage.setItem(k,v) }catch(e){} }
-function load(k){ try{ return localStorage.getItem(k) }catch(e){ return null } }
-
+const root=document.documentElement;
+function save(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function setLang(l){
-  root.lang = l; root.dir = l === 'fa' ? 'rtl' : 'ltr';
-  document.title = l === 'fa' ? 'بهنام علی‌پور | رزومه' : 'Behnam Alipour | Résumé';
-  save('lang', l);
+  root.lang=l;root.dir=l==='fa'?'rtl':'ltr';
+  document.title=l==='fa'?'بهنام علی‌پور | رزومه':'Behnam Alipour | Résumé';
+  save('lang',l);
 }
-document.getElementById('lang').onclick = () => setLang(root.lang === 'fa' ? 'en' : 'fa');
-document.getElementById('theme').onclick = () => {
-  const t = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  root.dataset.theme = t; save('theme', t);
+document.getElementById('lang').onclick=()=>setLang(root.lang==='fa'?'en':'fa');
+document.getElementById('theme').onclick=()=>{
+  const t=root.dataset.theme==='dark'?'light':'dark';
+  root.dataset.theme=t;save('theme',t);
 };
-document.querySelectorAll('.dots button').forEach(b => b.onclick = () => {
-  root.dataset.accent = b.dataset.c; save('accent', b.dataset.c);
+document.querySelectorAll('.dots button').forEach(b=>b.onclick=()=>{
+  root.dataset.accent=b.dataset.c;save('accent',b.dataset.c);
 });
-
-setLang(load('lang') || 'fa');
-root.dataset.theme = load('theme') || 'dark';
-root.dataset.accent = load('accent') || 'gold';
+setLang(load('lang')||'fa');
+root.dataset.theme=load('theme')||'dark';
+root.dataset.accent=load('accent')||'gold';
 </script>
 </body>
 </html>
